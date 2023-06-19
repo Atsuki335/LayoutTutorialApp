@@ -106,10 +106,7 @@ class FavoriteWidget extends StatefulWidget {
 class _FavoriteWidgetState extends State<FavoriteWidget> {
   bool _isFavorited = true; //bool型変数
   int _favoriteCount = 41;
-
-  @override
-  Widget build(BuildContext context) {
-    //ウィジェットの状態が変更されたことを伝え再描画する
+ //ウィジェットの状態が変更されたことを伝え再描画する
     void _toggleFavorite() {
       setState(() {
         if (_isFavorited) {
@@ -121,7 +118,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
         }
       });
     }
-
+  @override
+  Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
